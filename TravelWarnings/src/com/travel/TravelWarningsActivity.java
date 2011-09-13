@@ -149,13 +149,13 @@ public class TravelWarningsActivity extends ExpandableListActivity {
 				// }
 				groups[i] = title;
 
-				String description = "<div style='font-size: 11px;'>" +travelWarnings.get(i).getDescription() + "</div>";
+				String description = "<div style='font-size: 11px;'>"
+						+ travelWarnings.get(i).getDescription() + "</div>";
 
 				if (travelWarnings.get(i).getPubDate() != null) {
 					description = "<div style='font-size: 11px; font-weight: bold;font-style:italic;'>"
 							+ travelWarnings.get(i).getPubDate()
-							+ "</div><br/>"
-							+ description;
+							+ "</div><br/>" + description;
 				}
 
 				children[i][0] = description;
@@ -185,7 +185,7 @@ public class TravelWarningsActivity extends ExpandableListActivity {
 		public TextView getGenericView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.WRAP_CONTENT, 40);
+					ViewGroup.LayoutParams.FILL_PARENT, 40);
 
 			TextView textView = new TextView(TravelWarningsActivity.this);
 			textView.setLayoutParams(lp);
@@ -199,7 +199,7 @@ public class TravelWarningsActivity extends ExpandableListActivity {
 		public TextView getChildTextView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.WRAP_CONTENT, 250);
+					ViewGroup.LayoutParams.FILL_PARENT, 250);
 
 			TextView textView = new TextView(TravelWarningsActivity.this);
 			// textView.setLayoutParams(lp);
