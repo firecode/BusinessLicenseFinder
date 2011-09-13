@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>New Participant Registration Form</title>
+  <script language="JavaScript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+=''+nm+' must contain an e-mail address!\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+=''+nm+' must contain a number!\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+=''+nm+' must contain a number between '+min+' and '+max+'!\n';
+    } } } else if (test.charAt(0) == 'R') errors += 'Please enter your '+nm+'!\n'; }
+  } 
+x=document.ATTENDEEREGISTRATION
+pass1=x.Password.value;
+pass2=x.Password1.value;
+if (pass1!=pass2)
+{
+errors+='Please enter the same password!\n';
+return false;
+}
+
+if (errors) alert(errors);
+  document.MM_returnValue = (errors == '');
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+
+function isReady() {
+
+x=document.ATTENDEEREGISTRATION;
+
+if ((isTextField(x.FirstName.value) == false) ||
+	(isTextField(x.MiddleInitial.value) == false) ||
+	(isTextField(x.LastName.value) == false) ||
+	(isTextField(x.IEEENo.value) == false) ||
+	(isTextField(x.EMail.value) == false) ||
+	(isTextField(x.UserName.value) == false) ||
+	(isTextField(x.Password.value) == false) )
+	 {
+        alert("Text Fields may not include html tags");
+        return false;
+	}
+    
+    return true;
+}
+
+function isTextField(string) {
+    if (string.search(/[<&\%?]/gi) != -1)
+        return false;
+    else
+        return true;
+}
+   
+
+//-->
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<img src="images/title.png" width="100%" height="100" alt="Imess Logo" />
+<table border="0" style="width: 100%;" cellpadding="10" >
+  <tbody>
+    <tr>
+      <td
+ style="background-color: rgb(204, 255, 255); vertical-align: top; width: 15%;">
+      <div style="text-align: center;"><big>Links</big><br />
+<a href="about.html">About Imess</a> 
+      <p>&nbsp;</p>
+          <a href="http://ieee.org/portal/index.jsp">IEEE Home</a><br />
+          <a href="http://www.ieee.org/uab">IEEE UAB Home</a><br />
+          <a
+ href="http://www.ieee.org/portal/index.jsp?pageID=corp_level1&amp;path=about&amp;file=index.xml&amp;xsl=generic.xsl">About 
+          IEEE</a><br />
+      <a href="http://www.ieee.org/organizations/tab/society.html">IEEE
+Societies</a><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+       
+      </td>
+      <td width="100%" valign="top">
+      <div style="text-align: center;"><big
+ style="color: rgb(51, 102, 255);"> Login Page<br />
+          <br />
+      </big> </div>
+      <form
+ action="/imess/IMessController" method="post" name="ATTENDEEREGISTRATION" id="ATTENDEEREGISTRATION" onSubmit="return isReady();"> 
+          <input type="hidden" name="Form"
+ value="ATTENDEEREGISTRATION"  />
+        <table style="width: 380px; height: 269px;" border="0" bgcolor='#ffffcc'
+ cellspacing="2" cellpadding="2">
+          <tbody>
+            <tr>
+              <td>First Name </td>
+              <td><input name="FirstName" size="20" type="text" /> </td>
+            </tr>
+            <tr>
+              <td>Middle Initials </td>
+              <td><input name="MiddleInitial" size="20" type="text"  />
+              </td>
+            </tr>
+            <tr>
+              <td> Last Name </td>
+              <td> <input name="LastName" size="20" type="text" /> </td>
+            </tr>
+            <tr>
+                <td>IEEE Number<br />
+              </td>
+              <td><input name="IEEENo" size="20" type="text" /> </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td> <input name="EMail" id="part_email" size="20"
+ type="text" /> </td>
+            </tr>
+            <tr>
+              <td>User Name </td>
+              <td><input name="UserName" size="20" type="text" /> </td>
+            </tr>
+            <tr>
+              <td>Password </td>
+              <td><input name="Password" size="20" type="password" /> </td>
+            </tr>
+<tr>
+              <td>Confirm Password </td>
+              <td><input name="Password1" size="20" type="password" /> </td>
+            </tr>
+            <tr>
+              <td> <input name="B1"
+ onclick="MM_validateForm('FirstName','','R','LastName','','R','IEEENo','','RinRange00000000:99999999','part_address','','R','part_telno','','RisNum','UserName','','R','EMail','','RisEmail','Password','','R');return document.MM_returnValue"
+ value="Submit" type="submit" />
+                  &nbsp;&nbsp;&nbsp;
+                  <input value="Reset" name="B2"
+ type="reset" /> </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

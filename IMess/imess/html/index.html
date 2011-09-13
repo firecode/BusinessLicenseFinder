@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Login Page</title>
+  
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<script language="JavaScript" type="text/JavaScript">
+
+function validateForm(login)
+{
+if(""==document.forms.login.use.value)
+{
+alert("Please enter your Username!");
+document.forms.login.use.focus();
+return false;
+}
+if(""==document.forms.login.pass.value)
+{
+alert("Please enter your Password!");
+document.forms.login.pass.focus();
+return false;
+}
+}
+
+
+function MM_openBrWindow(theURL,winName,features) { 
+  window.open(theURL,winName,features);
+}
+
+
+  </script>
+</head>
+<body onload="document.forms.login.use.focus()">
+<img src="images/title.png" width="100%" height="100" alt="Imess Logo" />
+<table border="0" style="width: 100%;" cellpadding="10">
+  <tbody>
+    <tr>
+      <td
+ style="background-color: rgb(204, 255, 255); vertical-align: top; width: 15%;">
+      <div style="text-align: center;"><big>Links</big><br />
+<a href="about.html" target="_blank">About Imess</a> 
+      <p>&nbsp;</p>
+          <a href="http://ieee.org/portal/index.jsp">IEEE Home</a><br />
+      <a href="http://www.ieee.org/uab">IEEE UAB Home</a><br />
+          <a
+ href="http://www.ieee.org/portal/index.jsp?pageID=corp_level1&amp;path=about&amp;file=index.xml&amp;xsl=generic.xsl">About 
+          IEEE</a><br />
+      <a href="http://www.ieee.org/organizations/tab/society.html">IEEE
+Societies</a> 
+ </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+       
+      
+      </td>
+      <td width="100%" valign="top">
+      <div style="text-align: center;"><big
+ style="color: rgb(51, 102, 255);"> Login Page<br />
+          <br />
+      </big> </div>
+      <form
+ action="/imess/IMessController?Form=LOGIN" method="post" name="login" id="login"
+ onsubmit="return validateForm(login);">
+        <table border="0" cellspacing="2" id="AutoNumber1" align="left">
+          <tbody>
+            <tr>
+              <td width="50%"><font>&nbsp;User Name </font> </td>
+              <td width="50%"><font>&nbsp;
+                  <input type="text" name="use"
+ size="20" />
+                  </font></td>
+            </tr>
+            <tr>
+              <td width="50%"><font>&nbsp;Password </font> </td>
+              <td width="50%"><font>&nbsp;
+                  <input type="password"
+ name="pass" size="20" />
+                  </font></td>
+            </tr>
+            <tr>
+              <td>
+              <p align="left"><font> 
+                    <input type="submit"
+ name="asubmit" value="Login" onclick="validateForm" />
+                    </font></p>
+              </td>
+              <td> <b> New User?</b> <a href="/imess/html/partregform.html">Sign
+Up</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+

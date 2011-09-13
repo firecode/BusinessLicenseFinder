@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+    <!-- General description of your web application -->
+
+    <display-name>My Web Application</display-name>
+    <description>
+		IMess Deployment
+    </description>
+
+ 
+
+    <context-param>
+      <param-name>webmaster</param-name>
+      <param-value>mudalegv@uab.edu</param-value>
+      <description>
+        The EMAIL address of the administrator to whom questions
+        and comments about this application should be addressed.
+      </description>
+    </context-param>
+
+
+    <servlet>
+      <servlet-name>IMessController</servlet-name>
+      <description>
+		The App (for the moment)
+      </description>
+      <servlet-class>IMess.IMessController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>IMessController</servlet-name>
+      <url-pattern>/IMessController</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

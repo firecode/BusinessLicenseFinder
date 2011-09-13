@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BizLicenserActivity!</string>
+    <string name="app_name">Business License Finder</string>
+    <string name="selectlabel">Select Business</string>
+     <string name="searchlabel">Search</string>
+     <string name="expandable_list_sample_action">Action</string>
+      <string name="zipcodeLabel">Zip</string>
+      <string name="bizlistLabel">Business Type</string>
+     
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<TableLayout android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<TableRow>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/bizlistLabel"
+				android:textSize="12sp" android:textStyle="bold" />
+		</TableRow>
+		<TableRow>
+			<Spinner android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:layout_weight="1"
+				android:id="@+id/bizlist" />
+		</TableRow>
+		<TableRow>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/zipcodeLabel"
+				android:textSize="12sp" android:textStyle="bold" />
+		</TableRow>
+
+		<TableRow>
+			<EditText android:id="@+id/zipcode" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:layout_weight="1" android:numeric="integer" android:inputType="number"/>
+		</TableRow>
+
+		<TableRow>
+			<Button android:layout_height="wrap_content" android:text="@string/searchlabel"
+				android:id="@+id/searchlicenses" android:layout_width="match_parent"
+				android:layout_weight="1" />
+		</TableRow>
+
+	</TableLayout>
+</ScrollView>

@@ -185,7 +185,7 @@ public class TravelWarningsActivity extends ExpandableListActivity {
 		public TextView getGenericView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.MATCH_PARENT, 40);
+					ViewGroup.LayoutParams.WRAP_CONTENT, 40);
 
 			TextView textView = new TextView(TravelWarningsActivity.this);
 			textView.setLayoutParams(lp);
@@ -199,7 +199,7 @@ public class TravelWarningsActivity extends ExpandableListActivity {
 		public TextView getChildTextView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.MATCH_PARENT, 250);
+					ViewGroup.LayoutParams.WRAP_CONTENT, 250);
 
 			TextView textView = new TextView(TravelWarningsActivity.this);
 			// textView.setLayoutParams(lp);
