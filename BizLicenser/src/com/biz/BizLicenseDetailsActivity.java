@@ -212,7 +212,7 @@ public class BizLicenseDetailsActivity extends ExpandableListActivity {
 		public TextView getGenericView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.MATCH_PARENT, 40);
+					ViewGroup.LayoutParams.FILL_PARENT, 40);
 
 			TextView textView = new TextView(BizLicenseDetailsActivity.this);
 			textView.setLayoutParams(lp);
@@ -226,7 +226,7 @@ public class BizLicenseDetailsActivity extends ExpandableListActivity {
 		public TextView getChildTextView() {
 			// Layout parameters for the ExpandableListView
 			AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-					ViewGroup.LayoutParams.MATCH_PARENT, 250);
+					ViewGroup.LayoutParams.FILL_PARENT, 250);
 
 			TextView textView = new TextView(BizLicenseDetailsActivity.this);
 			// textView.setLayoutParams(lp);
